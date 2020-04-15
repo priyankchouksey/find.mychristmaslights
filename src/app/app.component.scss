@@ -1,0 +1,20 @@
+.bodycontainer {
+  height: 100%;
+  // top: 64px;
+  position: fixed;
+  width: 100%;
+  overflow: scroll;
+  // padding-bottom: 40px;
+  -ms-overflow-style: none;
+}
+.container::-webkit-scrollbar {
+  width: 0 !important;
+}
+@media(max-width: 599px) {
+  .container{
+    top : 56px;
+  }
+}
+.fullheight {
+  height: 100%;
+}

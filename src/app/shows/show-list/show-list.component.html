@@ -1,0 +1,12 @@
+<div class="listcontainer">
+  <mat-list #selectList *ngIf="markers && markers.length > 0">
+    <mat-list-item *ngFor="let item of markers; let lastitem = last; let isOddStn=odd"
+      [class.odd-station]="isOddStn" [class.even-station]="!isOddStn" style="height: 50px;" >
+        <img mat-list-avatar [src] = "item.logo">
+        <span mat-line>{{item.name}}</span>
+        <p mat-line> &bull; {{item.geo.city}}, {{item.geo.state}} </p>
+        <!-- <mat-checkbox align="end" [(ngModel)]="item.selected"></mat-checkbox> -->
+        <!-- <div class="badge" [matTooltip]="item.importCount + ' Users imported this station'">{{item.importCount}}</div> -->
+    </mat-list-item>
+  </mat-list>
+</div>
